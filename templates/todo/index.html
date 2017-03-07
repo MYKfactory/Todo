@@ -1,0 +1,9 @@
+{% if latest_poll_list %}
+    <ul>
+    {% for person in latest_poll_list %}
+        <li>{{ person.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
