@@ -1,5 +1,102 @@
-{% if todo %}
-    <ul>todo名は {{ todo.todo_name }}　です</ul>
-{% else %}
-    <p>No todo are available.</p>
-{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Detail Todo</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'common/layout.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" />
+<!--
+  <link rel="stylesheet" type="text/css" href="{% static 'todo/style.css' %}" />
+-->
+  </head>
+  <body>
+<!--
+    <div class="layout">
+      <div id="index">
+        <div class="select-span">
+          <ul class="listoficons">
+            <li>
+              <div id="Inbox">
+                  <img src="{% static 'images/inbox.png' %}" alt="Inbox">
+                  <a class="inbox" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" target="">Inbox</a>
+            </li>
+            <li>
+              <div id="Today">
+              <img src="{% static 'images/Today.png' %}" alt="Today">
+              <a class="Today" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" target="">Today</a>
+            </li>
+            <li>
+              <div id="1Week">
+              <img src="{% static 'images/1Week.png' %}" alt="1Week">
+              <a class="1Week" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" target="">1Week</a>
+            </li>
+          </ul>
+        </div>
+        <div class="select-manage">
+          <p>----Managed----</p>
+          <ul class="listoficons">
+            <li>
+              <div id="Category">
+                  <img src="{% static 'images/Category.png' %}" alt="Category">
+                  <a class="Category" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" target="">Category</a>
+            </li>
+            <li>
+              <div id="Person">
+              <img src="{% static 'images/Person.png' %}" alt="Person">
+              <a class="Person" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" target="">Person</a>
+            </li>
+            <li>
+              <div id="Priority">
+              <img src="{% static 'images/Priority.png' %}" alt="Priority">
+              <a class="Priority" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.css' %}" target="">Priority</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div id="main">
+      -->
+      <div id="bg_red" class ='well'>
+        {% if todo %}
+        <p>todo名は {{ todo.todo_name }}　です</p>
+      </div>
+
+      <div id="bg_red" class ='well'>
+        {% else %}
+          <p>No todo are available.</p>
+          {% endif %}
+        <p>todo名は {{ todo.todo_name }}　です</p>
+      </div>
+      </div>
+  </body>
+</html>
+<!--
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Detail Todo</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\y-miyake\Documents\NEXToDo\NEXToDo\static\todo\style.css" />
+  </head>
+  <body>
+    <p> aaaa<a>
+    <p> {% static 'todo/style.css' %} </p>
+
+    <div id="bg_red">
+      <p>todo名はです</p>
+    </div>
+    {% if todo %}
+    <div id="bg_red">
+      <p>todo名は {{ todo.todo_name }}　です</p>
+    </div>
+    {% else %}
+      <p>No todo are available.</p>
+    {% endif %}
+  </body>
+</html>
+
+-->

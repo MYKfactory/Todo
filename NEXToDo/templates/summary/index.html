@@ -1,3 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Detail Todo</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/outerblock.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-3.3.7-dist/css/bootstrap.css' %}" />
+  </head>
+  <body>
+    <div class="layout">
+      <iframe name=tag src="{% url 'tab' %}" width="400" height="700" seamless></iframe>
+      <iframe name=todo_resist src="{% url 'easy_todo_resist' %}" width="1000" height="700" seamless></iframe>
+    </div>
+  </body>
+</html>
+
+
+
+<!--
 {% if latest_category_list %}
     <ul>
     {% for category in latest_category_list %}
@@ -29,3 +49,4 @@
 {% else %}
     <p>No todo are available.</p>
 {% endif %}
+-->

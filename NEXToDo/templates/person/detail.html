@@ -1,5 +1,10 @@
-{% if person %}
-    <ul>人物名は {{ person.name }}　です</ul>
+{% if latest_person_list %}
+  <p>ページ建設中...</p>
+  {% for person in latest_person_list %}
+    <ul>
+      <li>人物名は {{ person.name }}　です</li>
+    </ul>
+  {% endfor %}
 {% else %}
-    <p>No Category are available.</p>
+    <p>No person are available.</p>
 {% endif %}

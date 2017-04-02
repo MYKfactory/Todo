@@ -1,5 +1,10 @@
-{% if category %}
-    <ul>カテゴリ名は {{ category.name }}　です</ul>
+{% if latest_category_list %}
+<p>ページ建設中...</p>
+{% for category in latest_category_list %}
+  <ul>
+    <li>カテゴリ名は {{ category.name }}　です</li>
+  </ul>
+{% endfor %}
 {% else %}
     <p>No Category are available.</p>
 {% endif %}

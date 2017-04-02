@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>One Week</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <p>建設中</p>
+     {% if latest_todo_list %}
+      {% for todo in latest_todo_list %}
+        <ul>
+          <li>{{ todo.name }}</li>
+        </ul>
+      {% endfor %}
+    {% else %}
+      <p>No todo in Resent Week...</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/outerblock.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-3.3.7-dist/css/bootstrap.css' %}" />
+  </head>
+  <body>
+    <div class="layout">
+      <div id="index">
+        <div class="select-span">
+          <ul class="listoficons">
+            <li>
+              <div class="Inbox">
+                <a class="hor_icon" href="{% url 'todo_all_list' %}" target="todo_resist">
+                  <img src="{% static 'images/inbox1.png' %}" alt="Inbox" class="image">
+                  <h1 class="cent">Inbox</h1>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="Today">
+                <a class="hor_icon" href="{% url 'todo_today' %}" target="todo_resist">
+                  <img src="{% static 'images/Today1.png' %}" alt="Today" class="image">
+                  <h1 class="cent">Today</h1>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="Week">
+                <a class="hor_icon" href="{% url 'todo_week' %}" target="todo_resist">
+                  <img src="{% static 'images/1Week1.png' %}" alt="1Week" class="image">
+                  <h1 class="cent">1Week</h1>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="select-manage">
+          <p>--Managed--</p>
+          <ul class="listoficons">
+            <li>
+              <div id="Category">
+                <a class="hor_icon" href="{% url 'category_detail' %}" target="todo_resist">
+                  <img src="{% static 'images/Category.png' %}" alt="Category" class="image">
+                  <h1 class="cent">Category</h1>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div id="Person">
+                <a class="hor_icon" href="{% url 'person_detail' %}" target="todo_resist">
+                  <img src="{% static 'images/Person.png' %}" alt="Person" class="image">
+                  <h1 class="cent">Person</h1>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div id="Priority">
+                <a class="hor_icon" href="{% url 'todo_priority' %}" target="todo_resist">
+                  <img src="{% static 'images/Priority.png' %}" alt="Priority" class="image">
+                  <h1 class="cent">Priority</h1>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
